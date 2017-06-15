@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint MTASDK.podspec' to ensure this is a
+# Be sure to run `pod lib lint TencentMTA.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'MTASDK'
+  s.name             = 'TencentMTA'
   s.version          = '2.0.2'
   s.summary          = 'Tencent MTA SDK for iOS to access Tencent MTA platform.'
 
@@ -20,12 +20,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
 
-  s.source_files = 'MTASDK/*.{h,m}'
-  s.vendored_libraries = 'MTASDK/*.a'
+  s.source_files = 'TencentMTA/*.{h,m}'
+  s.vendored_libraries = 'TencentMTA/*.a'
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'Security', 'CFNetwork'
   s.libraries = 'z', 'sqlite3'
   s.pod_target_xcconfig  = {
-    'LIBRARY_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/MTASDK", 
-    'OTHER_LDFLAGS' => '-lMTASDK'
+    'LIBRARY_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/TencentMTA", 
+    'OTHER_LDFLAGS' => '-lTencentMTA'
   }
 end
