@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'BayMTASDK_Example' do
-  pod 'BayMTASDK', :path => '../'
+  pod 'MTASDK', :path => '../'
 
   target 'BayMTASDK_Tests' do
     inherit! :search_paths

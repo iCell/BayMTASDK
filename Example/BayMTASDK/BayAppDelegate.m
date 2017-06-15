@@ -8,11 +8,19 @@
 
 #import "BayAppDelegate.h"
 
+#import <MTASDK/MTAConfig.h>
+#import <MTASDK/MTA.h>
+
 @implementation BayAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[MTAConfig getInstance] setSmartReporting:YES];
+    [[MTAConfig getInstance] setReportStrategy:MTA_STRATEGY_INSTANT];
+    
+    [[MTAConfig getInstance] setDebugEnable:YES];
+    
+    [MTA startWithAppkey:@"ios@shanbay.com"];
     return YES;
 }
 
